@@ -28,6 +28,11 @@ app.use("/api/v1",productRoutes)
 app.use("/api/auth",authRoutes);
 app.use("/api/cart",cartRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Myntra Clone Backend is running 🚀");
+});
+
+
 //Port
 const PORT = process.env.PORT || 3000
 app.listen(PORT,()=>console.log(`server running on port ${PORT}`))
