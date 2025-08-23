@@ -25,7 +25,7 @@ exports.addToCart = async (req, res) => {
       } else {
         cart.products.push({
           productId,
-          quantity: parseInt(quantity, 10),
+          quantity: parseInt(quantity, 10), //or +quantity
           price: product.price
         });
       }
